@@ -1,15 +1,13 @@
 import addClass from "../util/addClass";
-import removeClass from "../util/removeClass";
-import isFixed from "../util/isFixed";
-import getOffset from "../util/getOffset";
 import cloneObject from "../util/cloneObject";
-import forEach from "../util/forEach";
-import DOMEvent from "./DOMEvent";
-import setAnchorAsButton from "../util/setAnchorAsButton";
-import setHelperLayerPosition from "./setHelperLayerPosition";
-import placeTooltip from "./placeTooltip";
 import createElement from "../util/createElement";
 import debounce from "../util/debounce";
+import forEach from "../util/forEach";
+import getOffset from "../util/getOffset";
+import isFixed from "../util/isFixed";
+import removeClass from "../util/removeClass";
+import setAnchorAsButton from "../util/setAnchorAsButton";
+import DOMEvent from "./DOMEvent";
 
 /**
  * Get a queryselector within the hint wrapper
@@ -360,9 +358,6 @@ export async function showHintDialog(stepId) {
 
   referenceLayer.appendChild(tooltipLayer);
   document.body.appendChild(referenceLayer);
-
-  //set proper position
-  placeTooltip.call(this, hintElement, tooltipLayer, arrowLayer, true);
 }
 
 /**

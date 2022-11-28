@@ -1,5 +1,5 @@
 {
-  "name": "intro.js",
+  "name": "@exanic/intro.js",
   "version": "6.0.0",
   "description": "User Onboarding and Product Walkthrough Library",
   "keywords": [
@@ -15,7 +15,7 @@
   "homepage": "https://introjs.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/usablica/intro.js"
+    "url": "https://github.com/exanic/intro.js"
   },
   "main": "intro.js",
   "module": "intro.module.js",

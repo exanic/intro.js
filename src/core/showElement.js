@@ -1,17 +1,16 @@
-import setShowElement from "../util/setShowElement";
-import scrollParentToElement from "../util/scrollParentToElement";
 import addClass from "../util/addClass";
-import scrollTo from "../util/scrollTo";
-import exitIntro from "./exitIntro";
-import forEach from "../util/forEach";
-import setAnchorAsButton from "../util/setAnchorAsButton";
-import { nextStep, previousStep } from "./steps";
-import setHelperLayerPosition from "./setHelperLayerPosition";
-import placeTooltip from "./placeTooltip";
-import removeShowElement from "./removeShowElement";
-import createElement from "../util/createElement";
-import setStyle from "../util/setStyle";
 import appendChild from "../util/appendChild";
+import createElement from "../util/createElement";
+import forEach from "../util/forEach";
+import scrollParentToElement from "../util/scrollParentToElement";
+import scrollTo from "../util/scrollTo";
+import setAnchorAsButton from "../util/setAnchorAsButton";
+import setShowElement from "../util/setShowElement";
+import setStyle from "../util/setStyle";
+import exitIntro from "./exitIntro";
+import removeShowElement from "./removeShowElement";
+import setHelperLayerPosition from "./setHelperLayerPosition";
+import { nextStep, previousStep } from "./steps";
 
 /**
  * Gets the current progress percentage
@@ -264,12 +263,6 @@ export default async function _showElement(targetElement) {
 
       //set the tooltip position
       oldtooltipContainer.style.display = "block";
-      placeTooltip.call(
-        self,
-        targetElement.element,
-        oldtooltipContainer,
-        oldArrowLayer
-      );
 
       //change active bullet
       _updateBullets.call(self, oldReferenceLayer, targetElement);
@@ -465,7 +458,6 @@ export default async function _showElement(targetElement) {
     tooltipLayer.appendChild(buttonsLayer);
 
     //set proper position
-    placeTooltip.call(self, targetElement.element, tooltipLayer, arrowLayer);
 
     // change the scroll of the window, if needed
     scrollTo.call(this, targetElement.scrollTo, targetElement, tooltipLayer);

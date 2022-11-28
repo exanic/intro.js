@@ -1,8 +1,8 @@
+import addClass from "../util/addClass";
+import checkLeft from "../util/checkLeft";
+import checkRight from "../util/checkRight";
 import getOffset from "../util/getOffset";
 import getWindowSize from "../util/getWindowSize";
-import addClass from "../util/addClass";
-import checkRight from "../util/checkRight";
-import checkLeft from "../util/checkLeft";
 import removeEntry from "../util/removeEntry";
 
 /**

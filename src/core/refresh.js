@@ -1,7 +1,7 @@
-import { reAlignHints } from "./hint";
-import setHelperLayerPosition from "./setHelperLayerPosition";
-import placeTooltip from "./placeTooltip";
 import fetchIntroSteps from "./fetchIntroSteps";
+
+
+import setHelperLayerPosition from "./setHelperLayerPosition";
 import { _recreateBullets, _updateProgressBar } from "./showElement";
 
 /**
@@ -20,7 +20,6 @@ export default function refresh(refreshSteps) {
 
   // re-align intros
   setHelperLayerPosition.call(this, helperLayer);
-  setHelperLayerPosition.call(this, referenceLayer);
   setHelperLayerPosition.call(this, disableInteractionLayer);
 
   if (refreshSteps) {
@@ -32,23 +31,5 @@ export default function refresh(refreshSteps) {
     );
     _updateProgressBar.call(this, referenceLayer);
   }
-
-  // re-align tooltip
-  if (this._currentStep !== undefined && this._currentStep !== null) {
-    const oldArrowLayer = document.querySelector(".introjs-arrow");
-    const oldtooltipContainer = document.querySelector(".introjs-tooltip");
-
-    if (oldtooltipContainer && oldArrowLayer) {
-      placeTooltip.call(
-        this,
-        this._introItems[this._currentStep].element,
-        oldtooltipContainer,
-        oldArrowLayer
-      );
-    }
-  }
-
-  //re-align hints
-  reAlignHints.call(this);
   return this;
 }
