@@ -431,12 +431,12 @@ export default async function _showElement(targetElement) {
     skipTooltipButton.innerHTML = this._options.skipLabel;
 
     skipTooltipButton.onclick = async () => {
-      if (
-        self._introItems.length - 1 === self._currentStep &&
-        typeof self._introCompleteCallback === "function"
-      ) {
-        await self._introCompleteCallback.call(self, self._currentStep, "skip");
-      }
+      // if (
+      //   self._introItems.length - 1 === self._currentStep &&
+      //   typeof self._introCompleteCallback === "function"
+      // ) {
+      //   await self._introCompleteCallback.call(self, self._currentStep, "skip");
+      // }
 
       if (typeof self._introSkipCallback === "function") {
         await self._introSkipCallback.call(self);
