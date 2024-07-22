@@ -6,7 +6,6 @@ import exitIntro from "./exitIntro";
 import setAnchorAsButton from "../util/setAnchorAsButton";
 import { IntroStep, nextStep, previousStep } from "./steps";
 import setHelperLayerPosition from "./setHelperLayerPosition";
-import placeTooltip from "./placeTooltip";
 import removeShowElement from "./removeShowElement";
 import createElement from "../util/createElement";
 import setStyle from "../util/setStyle";
@@ -290,7 +289,7 @@ export default async function _showElement(
 
       //set the tooltip position
       oldTooltipContainer.style.display = "block";
-      placeTooltip(intro, targetElement, oldTooltipContainer, oldArrowLayer);
+      // placeTooltip(intro, targetElement, oldTooltipContainer, oldArrowLayer);
 
       //change active bullet
       _updateBullets(
@@ -502,7 +501,7 @@ export default async function _showElement(
     tooltipLayer.appendChild(buttonsLayer);
 
     // set proper position
-    placeTooltip(intro, targetElement, tooltipLayer, arrowLayer);
+    // placeTooltip(intro, targetElement, tooltipLayer, arrowLayer);
 
     // change the scroll of the window, if needed
     scrollTo(

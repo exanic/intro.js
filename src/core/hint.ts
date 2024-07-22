@@ -6,7 +6,6 @@ import cloneObject from "../util/cloneObject";
 import DOMEvent from "./DOMEvent";
 import setAnchorAsButton from "../util/setAnchorAsButton";
 import setHelperLayerPosition from "./setHelperLayerPosition";
-import placeTooltip from "./placeTooltip";
 import createElement from "../util/createElement";
 import debounce from "../util/debounce";
 import { HintPosition, HintStep, TooltipPosition } from "./steps";
@@ -387,7 +386,7 @@ export async function showHintDialog(intro: IntroJs, stepId: number) {
   document.body.appendChild(referenceLayer);
 
   // set proper position
-  placeTooltip(intro, currentStep, tooltipLayer, arrowLayer, true);
+  // placeTooltip(intro, currentStep, tooltipLayer, arrowLayer, true);
 }
 
 /**
